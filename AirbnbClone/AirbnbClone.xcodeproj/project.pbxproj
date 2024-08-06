@@ -9,19 +9,39 @@
 /* Begin PBXBuildFile section */
 		6E69129A2C61AB980096859E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6912992C61AB980096859E /* AppDelegate.swift */; };
 		6E69129C2C61AB980096859E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E69129B2C61AB980096859E /* SceneDelegate.swift */; };
-		6E69129E2C61AB980096859E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E69129D2C61AB980096859E /* ViewController.swift */; };
+		6E69129E2C61AB980096859E /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E69129D2C61AB980096859E /* MainTabBarController.swift */; };
 		6E6912A32C61AB9A0096859E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E6912A22C61AB9A0096859E /* Assets.xcassets */; };
 		6E6912A62C61AB9A0096859E /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 6E6912A52C61AB9A0096859E /* Base */; };
+		6E6912B52C61B16D0096859E /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6912B42C61B16D0096859E /* ExploreViewController.swift */; };
+		6E6912B72C61B1FA0096859E /* ExploreScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6912B62C61B1FA0096859E /* ExploreScreen.swift */; };
+		6E6912BA2C61B2E60096859E /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6912B92C61B2E60096859E /* FavoriteViewController.swift */; };
+		6E6912BC2C61B3520096859E /* FavoriteScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6912BB2C61B3520096859E /* FavoriteScreen.swift */; };
+		6E6912BF2C61B3A40096859E /* TravelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6912BE2C61B3A40096859E /* TravelViewController.swift */; };
+		6E6912C12C61B3C30096859E /* TravelScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6912C02C61B3C30096859E /* TravelScreen.swift */; };
+		6E6912C42C61B4170096859E /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6912C32C61B4170096859E /* MessageViewController.swift */; };
+		6E6912C62C61B43A0096859E /* MessageScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6912C52C61B43A0096859E /* MessageScreen.swift */; };
+		6E6912C92C61B48B0096859E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6912C82C61B48B0096859E /* ProfileViewController.swift */; };
+		6E6912CB2C61B4AA0096859E /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6912CA2C61B4AA0096859E /* ProfileScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6E6912962C61AB980096859E /* AirbnbClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirbnbClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E6912992C61AB980096859E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E69129B2C61AB980096859E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6E69129D2C61AB980096859E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6E69129D2C61AB980096859E /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		6E6912A22C61AB9A0096859E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E6912A52C61AB9A0096859E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E6912A72C61AB9A0096859E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E6912B42C61B16D0096859E /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
+		6E6912B62C61B1FA0096859E /* ExploreScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreScreen.swift; sourceTree = "<group>"; };
+		6E6912B92C61B2E60096859E /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		6E6912BB2C61B3520096859E /* FavoriteScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteScreen.swift; sourceTree = "<group>"; };
+		6E6912BE2C61B3A40096859E /* TravelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelViewController.swift; sourceTree = "<group>"; };
+		6E6912C02C61B3C30096859E /* TravelScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelScreen.swift; sourceTree = "<group>"; };
+		6E6912C32C61B4170096859E /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		6E6912C52C61B43A0096859E /* MessageScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageScreen.swift; sourceTree = "<group>"; };
+		6E6912C82C61B48B0096859E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		6E6912CA2C61B4AA0096859E /* ProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +74,112 @@
 		6E6912982C61AB980096859E /* AirbnbClone */ = {
 			isa = PBXGroup;
 			children = (
+				6E6912B22C61B00A0096859E /* MainTabBarController */,
+				6E6912B12C61AFEE0096859E /* ProfileTab */,
+				6E6912B02C61AFD00096859E /* MessageTab */,
+				6E6912AF2C61AFB70096859E /* TravelTab */,
+				6E6912AE2C61AFAB0096859E /* FavoriteTab */,
+				6E6912AD2C61AF720096859E /* ExploreTab */,
 				6E6912992C61AB980096859E /* AppDelegate.swift */,
 				6E69129B2C61AB980096859E /* SceneDelegate.swift */,
-				6E69129D2C61AB980096859E /* ViewController.swift */,
 				6E6912A22C61AB9A0096859E /* Assets.xcassets */,
 				6E6912A42C61AB9A0096859E /* LaunchScreen.storyboard */,
 				6E6912A72C61AB9A0096859E /* Info.plist */,
 			);
 			path = AirbnbClone;
+			sourceTree = "<group>";
+		};
+		6E6912AD2C61AF720096859E /* ExploreTab */ = {
+			isa = PBXGroup;
+			children = (
+				6E6912B32C61B1520096859E /* Screen */,
+				6E6912B42C61B16D0096859E /* ExploreViewController.swift */,
+			);
+			path = ExploreTab;
+			sourceTree = "<group>";
+		};
+		6E6912AE2C61AFAB0096859E /* FavoriteTab */ = {
+			isa = PBXGroup;
+			children = (
+				6E6912B82C61B2BD0096859E /* Screen */,
+				6E6912B92C61B2E60096859E /* FavoriteViewController.swift */,
+			);
+			path = FavoriteTab;
+			sourceTree = "<group>";
+		};
+		6E6912AF2C61AFB70096859E /* TravelTab */ = {
+			isa = PBXGroup;
+			children = (
+				6E6912BD2C61B3920096859E /* Screen */,
+				6E6912BE2C61B3A40096859E /* TravelViewController.swift */,
+			);
+			path = TravelTab;
+			sourceTree = "<group>";
+		};
+		6E6912B02C61AFD00096859E /* MessageTab */ = {
+			isa = PBXGroup;
+			children = (
+				6E6912C22C61B4090096859E /* Screen */,
+				6E6912C32C61B4170096859E /* MessageViewController.swift */,
+			);
+			path = MessageTab;
+			sourceTree = "<group>";
+		};
+		6E6912B12C61AFEE0096859E /* ProfileTab */ = {
+			isa = PBXGroup;
+			children = (
+				6E6912C72C61B47F0096859E /* Screen */,
+				6E6912C82C61B48B0096859E /* ProfileViewController.swift */,
+			);
+			path = ProfileTab;
+			sourceTree = "<group>";
+		};
+		6E6912B22C61B00A0096859E /* MainTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				6E69129D2C61AB980096859E /* MainTabBarController.swift */,
+			);
+			path = MainTabBarController;
+			sourceTree = "<group>";
+		};
+		6E6912B32C61B1520096859E /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				6E6912B62C61B1FA0096859E /* ExploreScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		6E6912B82C61B2BD0096859E /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				6E6912BB2C61B3520096859E /* FavoriteScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		6E6912BD2C61B3920096859E /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				6E6912C02C61B3C30096859E /* TravelScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		6E6912C22C61B4090096859E /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				6E6912C52C61B43A0096859E /* MessageScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		6E6912C72C61B47F0096859E /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				6E6912CA2C61B4AA0096859E /* ProfileScreen.swift */,
+			);
+			path = Screen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,8 +252,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E69129E2C61AB980096859E /* ViewController.swift in Sources */,
+				6E6912B72C61B1FA0096859E /* ExploreScreen.swift in Sources */,
+				6E6912C12C61B3C30096859E /* TravelScreen.swift in Sources */,
+				6E6912B52C61B16D0096859E /* ExploreViewController.swift in Sources */,
+				6E6912BF2C61B3A40096859E /* TravelViewController.swift in Sources */,
+				6E6912CB2C61B4AA0096859E /* ProfileScreen.swift in Sources */,
+				6E6912C42C61B4170096859E /* MessageViewController.swift in Sources */,
+				6E69129E2C61AB980096859E /* MainTabBarController.swift in Sources */,
+				6E6912C92C61B48B0096859E /* ProfileViewController.swift in Sources */,
 				6E69129A2C61AB980096859E /* AppDelegate.swift in Sources */,
+				6E6912C62C61B43A0096859E /* MessageScreen.swift in Sources */,
+				6E6912BC2C61B3520096859E /* FavoriteScreen.swift in Sources */,
+				6E6912BA2C61B2E60096859E /* FavoriteViewController.swift in Sources */,
 				6E69129C2C61AB980096859E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
