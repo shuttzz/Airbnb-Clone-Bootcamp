@@ -26,6 +26,8 @@ class MainTabBarController: UITabBarController {
         let navController = UINavigationController(rootViewController: viewController)
         navController.tabBarItem.title = title
         navController.tabBarItem.image = UIImage(systemName: imageName)
+        // Desativa a NavBar
+        navController.isNavigationBarHidden = true
         return navController
     }
     

@@ -10,15 +10,17 @@ import UIKit
 
 class FavoriteScreen: UIView {
     
-    lazy var favoriteScreenLabel: UILabel = {
-        let label = UILabel()
-        
-        // Sempre tem que deixar ele desabilitado para qualquer elemeto que eu criar em viewCode
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Favorite"
-        label.font = UIFont.boldSystemFont(ofSize: 28)
-        
-        return label
+    lazy var searchBarView: SearchBarView = {
+        let view = SearchBarView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .white
+        view.layer.cornerRadius = 30
+        // sombra
+        view.layer.shadowColor = UIColor.black.cgColor
+        view.layer.shadowOpacity = 0.1
+        view.layer.shadowOffset = CGSize(width: 0, height: 2)
+        view.layer.shadowRadius = 8
+        return view
     }()
     
     init() {
@@ -33,13 +35,15 @@ class FavoriteScreen: UIView {
     }
     
     func addElements() {
-        addSubview(favoriteScreenLabel)
+        addSubview(searchBarView)
     }
     
     func configConstraints() {
         NSLayoutConstraint.activate([
-            favoriteScreenLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            favoriteScreenLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
+            searchBarView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 16),
+            searchBarView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
+            searchBarView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
+            searchBarView.heightAnchor.constraint(equalToConstant: 60),
         ])
     }
     
