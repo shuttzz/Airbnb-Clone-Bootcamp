@@ -44,8 +44,36 @@ class ExploreScreen: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .lightGray
         label.font = UIFont.systemFont(ofSize: 12)
-        label.text = "Qualquer lugar · Qualquer semana · Hóspedes? Qualquer lugar · Qualquer semana · Hóspedes?"
+        label.text = "Qualquer lugar · Qualquer semana · Hóspedes?"
         return label
+    }()
+    
+    lazy var collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+        layout.scrollDirection = .horizontal
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.backgroundColor = .white
+        collectionView.register(CategoryCollectionViewCell.self, forCellWithReuseIdentifier: CategoryCollectionViewCell.identifier)
+        return collectionView
+    }()
+    
+    lazy var lineView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .lightGray
+        return view
+    }()
+    
+    lazy var tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.register(DestinationTableViewCell.self, forCellReuseIdentifier: DestinationTableViewCell.identifier)
+        tableView.backgroundColor = .white
+        tableView.separatorStyle = .none
+        return tableView
     }()
     
     init() {
@@ -59,11 +87,19 @@ class ExploreScreen: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func configCollectionViewProtocols(delegate: UICollectionViewDelegate, dataSource: UICollectionViewDataSource) {
+        collectionView.delegate = delegate
+        collectionView.dataSource = dataSource
+    }
+    
     func addElements() {
         addSubview(searchBarView)
         searchBarView.addSubview(searchIconImageView)
         searchBarView.addSubview(searchLabel)
         searchBarView.addSubview(searchDetailLabel)
+        addSubview(collectionView)
+        addSubview(lineView)
+        addSubview(tableView)
     }
     
     func configConstraints() {
@@ -83,8 +119,28 @@ class ExploreScreen: UIView {
             
             searchDetailLabel.leadingAnchor.constraint(equalTo: searchLabel.leadingAnchor),
             searchDetailLabel.topAnchor.constraint(equalTo: searchLabel.bottomAnchor, constant: 2),
-            searchDetailLabel.trailingAnchor.constraint(equalTo: searchBarView.trailingAnchor, constant: -2)
+            searchDetailLabel.trailingAnchor.constraint(equalTo: searchBarView.trailingAnchor, constant: -2),
+            
+            collectionView.topAnchor.constraint(equalTo: searchBarView.bottomAnchor, constant: 16),
+            collectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            collectionView.heightAnchor.constraint(equalToConstant: CategoryCollectionViewCell.height),
+            
+            lineView.topAnchor.constraint(equalTo: collectionView.bottomAnchor),
+            lineView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            lineView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            lineView.heightAnchor.constraint(equalToConstant: 0.3),
+            
+            tableView.topAnchor.constraint(equalTo: lineView.bottomAnchor),
+            tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: bottomAnchor),
         ])
+    }
+    
+    func configTableViewProtocols(delegate: UITableViewDelegate, dataSource: UITableViewDataSource) {
+        tableView.delegate = delegate
+        tableView.dataSource = dataSource
     }
     
 }

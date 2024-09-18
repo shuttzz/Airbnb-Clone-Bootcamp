@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		6E0647D42C6ABD57003DE53B /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0647D32C6ABD57003DE53B /* SearchBarView.swift */; };
+		6E316C202C7D5CB200C2EA1B /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E316C1F2C7D5CB200C2EA1B /* CategoryCollectionViewCell.swift */; };
+		6E316C232C7D638200C2EA1B /* ExplorerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E316C222C7D638200C2EA1B /* ExplorerViewModel.swift */; };
+		6E316C262C7D641F00C2EA1B /* TravelCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E316C252C7D641F00C2EA1B /* TravelCategory.swift */; };
+		6E4D28542C9A621300284FB5 /* PropertyDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4D28532C9A621300284FB5 /* PropertyDataModel.swift */; };
+		6E4D28562C9AFC8100284FB5 /* CategoryImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4D28552C9AFC7400284FB5 /* CategoryImageCollectionViewCell.swift */; };
+		6E4D28582C9AFCA000284FB5 /* DestinationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4D28572C9AFCA000284FB5 /* DestinationTableViewCell.swift */; };
 		6E69129A2C61AB980096859E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6912992C61AB980096859E /* AppDelegate.swift */; };
 		6E69129C2C61AB980096859E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E69129B2C61AB980096859E /* SceneDelegate.swift */; };
 		6E69129E2C61AB980096859E /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E69129D2C61AB980096859E /* MainTabBarController.swift */; };
@@ -27,6 +33,12 @@
 
 /* Begin PBXFileReference section */
 		6E0647D32C6ABD57003DE53B /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		6E316C1F2C7D5CB200C2EA1B /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		6E316C222C7D638200C2EA1B /* ExplorerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorerViewModel.swift; sourceTree = "<group>"; };
+		6E316C252C7D641F00C2EA1B /* TravelCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelCategory.swift; sourceTree = "<group>"; };
+		6E4D28532C9A621300284FB5 /* PropertyDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyDataModel.swift; sourceTree = "<group>"; };
+		6E4D28552C9AFC7400284FB5 /* CategoryImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		6E4D28572C9AFCA000284FB5 /* DestinationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationTableViewCell.swift; sourceTree = "<group>"; };
 		6E6912962C61AB980096859E /* AirbnbClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirbnbClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E6912992C61AB980096859E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E69129B2C61AB980096859E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +85,25 @@
 			path = SearchBarView;
 			sourceTree = "<group>";
 		};
+		6E316C1E2C7D5C9600C2EA1B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				6E4D28572C9AFCA000284FB5 /* DestinationTableViewCell.swift */,
+				6E4D28552C9AFC7400284FB5 /* CategoryImageCollectionViewCell.swift */,
+				6E316C1F2C7D5CB200C2EA1B /* CategoryCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		6E316C242C7D640D00C2EA1B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6E316C252C7D641F00C2EA1B /* TravelCategory.swift */,
+				6E4D28532C9A621300284FB5 /* PropertyDataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		6E69128D2C61AB980096859E = {
 			isa = PBXGroup;
 			children = (
@@ -111,8 +142,11 @@
 		6E6912AD2C61AF720096859E /* ExploreTab */ = {
 			isa = PBXGroup;
 			children = (
+				6E316C242C7D640D00C2EA1B /* Model */,
+				6E316C1E2C7D5C9600C2EA1B /* Cell */,
 				6E6912B32C61B1520096859E /* Screen */,
 				6E6912B42C61B16D0096859E /* ExploreViewController.swift */,
+				6E316C222C7D638200C2EA1B /* ExplorerViewModel.swift */,
 			);
 			path = ExploreTab;
 			sourceTree = "<group>";
@@ -272,19 +306,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E6912B72C61B1FA0096859E /* ExploreScreen.swift in Sources */,
+				6E316C202C7D5CB200C2EA1B /* CategoryCollectionViewCell.swift in Sources */,
 				6E6912C12C61B3C30096859E /* TravelScreen.swift in Sources */,
 				6E6912B52C61B16D0096859E /* ExploreViewController.swift in Sources */,
+				6E4D28562C9AFC8100284FB5 /* CategoryImageCollectionViewCell.swift in Sources */,
 				6E6912BF2C61B3A40096859E /* TravelViewController.swift in Sources */,
 				6E6912CB2C61B4AA0096859E /* ProfileScreen.swift in Sources */,
 				6E6912C42C61B4170096859E /* MessageViewController.swift in Sources */,
 				6E69129E2C61AB980096859E /* MainTabBarController.swift in Sources */,
 				6E6912C92C61B48B0096859E /* ProfileViewController.swift in Sources */,
+				6E316C262C7D641F00C2EA1B /* TravelCategory.swift in Sources */,
 				6E69129A2C61AB980096859E /* AppDelegate.swift in Sources */,
+				6E4D28582C9AFCA000284FB5 /* DestinationTableViewCell.swift in Sources */,
 				6E6912C62C61B43A0096859E /* MessageScreen.swift in Sources */,
+				6E4D28542C9A621300284FB5 /* PropertyDataModel.swift in Sources */,
 				6E0647D42C6ABD57003DE53B /* SearchBarView.swift in Sources */,
 				6E6912BC2C61B3520096859E /* FavoriteScreen.swift in Sources */,
 				6E6912BA2C61B2E60096859E /* FavoriteViewController.swift in Sources */,
 				6E69129C2C61AB980096859E /* SceneDelegate.swift in Sources */,
+				6E316C232C7D638200C2EA1B /* ExplorerViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +468,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SJH7A74XS3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AirbnbClone/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -460,6 +501,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SJH7A74XS3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AirbnbClone/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
