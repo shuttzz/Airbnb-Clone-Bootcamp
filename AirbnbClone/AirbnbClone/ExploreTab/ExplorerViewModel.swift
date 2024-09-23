@@ -7,7 +7,14 @@
 
 import Foundation
 
+protocol ExplorerViewModelProtocol: AnyObject {
+    func success()
+    func failure(errorMessage: String)
+}
+
 class ExplorerViewModel {
+    
+    weak var delegate: ExplorerViewModelProtocol?
     
     private var properties: [PropertyDataModel] = [
         PropertyDataModel(
@@ -132,18 +139,21 @@ class ExplorerViewModel {
         )
     ]
     
-    private var categoryList: [TravelCategory] = [
-        TravelCategory(image: "ticket", category: "Icônicos", isSelected: true),
-        TravelCategory(image: "house.and.flag.fill", category: "Chalés"),
-        TravelCategory(image: "beach.umbrella", category: "Em frente à praia"),
-        TravelCategory(image: "sun.horizon.fill", category: "Vistas incríveis"),
-        TravelCategory(image: "fireworks", category: "Castelos"),
-        TravelCategory(image: "flame", category: "Em alta"),
-        TravelCategory(image: "tree", category: "Ilhas"),
-        TravelCategory(image: "figure.pool.swim", category: "Lago"),
-        TravelCategory(image: "sailboat", category: "Barcos"),
-        TravelCategory(image: "snowflake", category: "Ártico"),
-    ]
+    private var categoryList: [TravelCategory] = []
+    
+    func fetchCategoryListMock() {
+        ServiceMock.loadJSON(fileName: "category", type: [TravelCategory].self) { [weak self] result in
+            guard let self else { return }
+            
+            switch result {
+            case .success(let data):
+                self.categoryList = data
+                delegate?.success()
+            case .failure(let error):
+                delegate?.failure(errorMessage: error.localizedDescription)
+            }
+        }
+    }
     
     var getSelectedCategoryIndex: Int {
         return categoryList.firstIndex(where: { $0.isSelected }) ?? 0
