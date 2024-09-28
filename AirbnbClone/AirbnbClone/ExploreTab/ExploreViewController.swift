@@ -20,8 +20,8 @@ class ExploreViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.delegate = self
-        screen?.configTableViewProtocols(delegate: self, dataSource: self)
-        viewModel.fetchCategoryListMock()
+        //viewModel.fetchAllMock()
+        viewModel.fetchAllRequest()
     }
     
 }
@@ -74,9 +74,10 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
 extension ExploreViewController: ExplorerViewModelProtocol {
     func success() {
         screen?.configCollectionViewProtocols(delegate: self, dataSource: self)
+        screen?.configTableViewProtocols(delegate: self, dataSource: self)
     }
     
     func failure(errorMessage: String) {
-        
+        print(errorMessage)
     }
 }
